@@ -11,19 +11,18 @@ EduQuiz adalah aplikasi kuis berbasis command-line yang dikembangkan untuk memen
 | Dava Ardana Valdiaswara Ali                 | 2211104048  |
 
 ## 🧱 Struktur Proyek
+<pre>
 /CLO2_TB_KPL
-│
-├── subfolder_A  ← dikerjakan oleh Adhiansyah & Dava
-│   ├── soal_config.json
-│   ├── kuis_table.py       ← implementasi table-driven
-│   └── config_loader.py    ← runtime configuration
-│
-├── subfolder_B  ← dikerjakan oleh Ricky & Hamid
-│   ├── automata_engine.py  ← state machine untuk navigasi kuis
-│   └── question_utils.py   ← code reuse: library soal dan evaluasi
-│
 ├── main.py
 ├── README.md
+├── subfolder_A  ← dikerjakan oleh Adhiansyah & Dava
+│   ├── config_loader.py    ← runtime configuration
+│   ├── kuis_table.py       ← implementasi table-driven
+│   └── soal_config.json
+└── subfolder_B  ← dikerjakan oleh Ricky & Hamid
+    ├── automata_engine.py  ← state machine untuk navigasi kuis
+    └── question_utils.py   ← code reuse: library soal dan evaluasi
+</pre>
 
 ## 🔧 Teknologi & Teknik Konstruksi
 
