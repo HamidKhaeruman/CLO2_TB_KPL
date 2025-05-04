@@ -1,0 +1,52 @@
+[
+    {
+      "category": "Matematika",
+      "question": "Hasil dari 5 + 3 x 2 adalah...",
+      "answer": "11"
+    },
+    {
+      "category": "Matematika",
+      "question": "Nilai dari akar kuadrat 144 adalah...",
+      "answer": "12"
+    },
+    {
+      "category": "Bahasa Indonesia",
+      "question": "Ibukota negara Indonesia adalah...",
+      "answer": "Jakarta"
+    },
+    {
+      "category": "Bahasa Indonesia",
+      "question": "Siapakah penulis novel 'Laskar Pelangi'?",
+      "answer": "Andrea Hirata"
+    },
+    {
+      "category": "Bahasa Inggris",
+      "question": "What is the capital city of England?",
+      "answer": "London"
+    },
+    {
+      "category": "Bahasa Inggris",
+      "question": "What is the past tense of 'go'?",
+      "answer": "went"
+    },
+    {
+      "category": "Manajemen Bisnis",
+      "question": "Apa kepanjangan dari SWOT?",
+      "answer": "Strengths, Weaknesses, Opportunities, Threats"
+    },
+    {
+      "category": "Manajemen Bisnis",
+      "question": "Fungsi manajemen yang berkaitan dengan pengarahan dan motivasi karyawan disebut...",
+      "answer": "Leading"
+    },
+    {
+      "category": "Cryptography",
+      "question": "Apa itu enkripsi?",
+      "answer": "Proses mengubah data menjadi kode rahasia"
+    },
+    {
+      "category": "Cryptography",
+      "question": "Algoritma enkripsi simetris yang populer adalah...",
+      "answer": "AES"
+    }
+  ]
