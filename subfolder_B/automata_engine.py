@@ -1,5 +1,6 @@
 # subfolder_B/automata_engine.py
 from subfolder_B.question_utils import load_questions_by_category, evaluate_answer, calculate_score
+from subfolder_A.kuis_table import load_quiz_data, lookup_quiz
 
 def start_quiz():
     print("=== Selamat datang di EduQuiz ===")
@@ -24,24 +25,23 @@ def start_quiz():
     elif category_input == "4":
         category = "Manajemen Bisnis"
     elif category_input == "5":
-        category = "Cryptography"
+        category = "Kriptografi"
     else:
         print("Pilihan tidak valid. Default ke 'Matematika'")
         category = "Matematika"
 
-
-    questions = load_questions_by_category("subfolder_A/soal_config.json", category)
+    chosen_set = load_questions_by_category(category)
 
     correct_count = 0
-    for idx, q in enumerate(questions, 1):
-        print(f"\nSoal {idx}: {q['question']}")
+    for index, quiz in enumerate(chosen_set):
+        print(f"\nSoal {index}: {quiz['question']}")
         answer = input("Jawaban Anda: ")
-        if evaluate_answer(q['answer'], answer):
+        if evaluate_answer(quiz['answer'], answer):
             print("✅ Benar!")
             correct_count += 1
         else:
-            print(f"❌ Salah. Jawaban yang benar: {q['answer']}")
+            print(f"❌ Salah. Jawaban yang benar: {quiz['answer']}")
 
-    score = calculate_score(correct_count, len(questions))
+    score = calculate_score(correct_count, len(chosen_set))
     print(f"\n{name}, skor akhir Anda: {score}/100")
     print("=== Terima kasih telah bermain! ===")
