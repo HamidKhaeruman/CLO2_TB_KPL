@@ -21,7 +21,7 @@
     },
     {
       "category": "Bahasa Inggris",
-      "question": "What is the capital city of England?",
+      "question": "What is the capital city of United Kingdom?",
       "answer": "London"
     },
     {
@@ -40,12 +40,12 @@
       "answer": "Leading"
     },
     {
-      "category": "Cryptography",
+      "category": "Kriptografi",
       "question": "Apa itu enkripsi?",
       "answer": "Proses mengubah data menjadi kode rahasia"
     },
     {
-      "category": "Cryptography",
+      "category": "Kriptografi",
       "question": "Algoritma enkripsi simetris yang populer adalah...",
       "answer": "AES"
     }

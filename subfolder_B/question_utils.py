@@ -1,10 +1,11 @@
 # subfolder_B/question_utils.py
 import json
+from subfolder_A.kuis_table import load_quiz_data, lookup_quiz
 
-def load_questions_by_category(filepath, category):
-    with open(filepath, 'r') as f:
-        data = json.load(f)
-    return [q for q in data if q['category'] == category]
+def load_questions_by_category(category):
+    quizzes = load_quiz_data()
+    print(quizzes)
+    return [q for q in quizzes if q['category'] == category]
 
 def evaluate_answer(correct_answer, user_answer):
     return correct_answer.strip().lower() == user_answer.strip().lower()
