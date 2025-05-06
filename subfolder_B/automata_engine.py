@@ -1,6 +1,20 @@
+# ================================================================
+# Unit Test Verification:
+# Pengujian fungsi start_quiz() telah berhasil dijalankan menggunakan unittest.
+# Hasil: OK (1 test ran, no failures or errors)
+# Tester: Hamid Khaeruman (2211104040)
+# Tanggal Pengujian: 6 Mei 2025
+# ================================================================
+
 # subfolder_B/automata_engine.py
 from subfolder_B.question_utils import load_questions_by_category, evaluate_answer, calculate_score
 from subfolder_A.kuis_table import load_quiz_data, lookup_quiz
+
+# Unit Test Result:
+# Fungsi start_quiz() telah berhasil diuji menggunakan unittest
+# dengan hasil OK (tanpa error, fault, atau failure).
+# Test mencakup skenario kuis kategori Matematika dengan dua soal.
+# Output yang diuji termasuk verifikasi skor akhir 100/100 dan respons jawaban benar sebanyak dua kali.
 
 def start_quiz():
     print("=== Selamat datang di EduQuiz ===")
