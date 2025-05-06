@@ -66,6 +66,8 @@ def start_quiz():
     for index, quiz in enumerate(chosen_set):
         print(f"\nSoal {index}: {quiz['question']}")
         answer = input("Jawaban Anda: ")
+        
+        # Menggunakan teknik konstruksi Defensive Programming untuk memeriksa jawaban pengguna
         if evaluate_answer(quiz['answer'], answer):
             print("✅ Benar!")
             correct_count += 1
