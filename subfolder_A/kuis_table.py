@@ -7,7 +7,6 @@ def load_quiz_data():
         with open(json_file, 'r') as f:
             quizzes = json.load(f)
         
-        print(quizzes)
         return quizzes
     except FileNotFoundError:
         print("Berkas data kuis tidak dapat ditemukan. Silakan perbaiki ini.")
