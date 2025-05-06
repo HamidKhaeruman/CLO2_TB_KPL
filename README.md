@@ -15,13 +15,19 @@ EduQuiz adalah aplikasi kuis berbasis command-line yang dikembangkan untuk memen
 /CLO2_TB_KPL
 ├── main.py
 ├── README.md
+├── performance_test ← folder berisi file kode untuk performance testing
+│   ├── performance_test.py
+│   └── README.md ← dokumentasi hasil performance test
 ├── subfolder_A  ← dikerjakan oleh Adhiansyah & Dava
 │   ├── config_loader.py    ← runtime configuration
 │   ├── kuis_table.py       ← implementasi table-driven
 │   └── soal_config.json
-└── subfolder_B  ← dikerjakan oleh Ricky & Hamid
-    ├── automata_engine.py  ← state machine untuk navigasi kuis
-    └── question_utils.py   ← code reuse: library soal dan evaluasi
+├── subfolder_B  ← dikerjakan oleh Ricky & Hamid
+│   ├── automata_engine.py  ← state machine untuk navigasi kuis
+│   ├── question_utils.py   ← code reuse: library soal dan evaluasi
+│   └── test ← subfolder file unit testing
+│       ├── test_automata_engine.py
+│       └── test_question_utils.py
 </pre>
 
 ## 🔧 Teknologi & Teknik Konstruksi
