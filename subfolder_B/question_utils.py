@@ -3,13 +3,24 @@ import json
 from subfolder_A.kuis_table import load_quiz_data, lookup_quiz
 
 def load_questions_by_category(category):
+    if category is None:
+        print("Kategori tidak boleh None")
+        return []
     quizzes = load_quiz_data()
-    return [q for q in quizzes if q['category'] == category]
+    if quizzes is None:
+        return []
+    return [q for q in quizzes if q.get('category') == category]
 
 def evaluate_answer(correct_answer, user_answer):
+    if correct_answer is None or user_answer is None:
+        print("Jawaban tidak boleh None")
+        return False
     return correct_answer.strip().lower() == user_answer.strip().lower()
 
 def calculate_score(correct_count, total_questions):
+    if total_questions == 0:
+        print("Total pertanyaan tidak boleh nol")
+        return 0
     return int((correct_count / total_questions) * 100)
 
 # Komentar hasil uji unit test

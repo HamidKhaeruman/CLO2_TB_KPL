@@ -45,6 +45,9 @@ def start_quiz():
         category = "Matematika"
 
     chosen_set = load_questions_by_category(category)
+    if not chosen_set:
+        print("Tidak ada pertanyaan untuk kategori ini")
+        return
 
     correct_count = 0
     for index, quiz in enumerate(chosen_set):
