@@ -16,13 +16,13 @@ from subfolder_A.kuis_table import load_quiz_data, lookup_quiz
 # Test mencakup skenario kuis kategori Matematika dengan dua soal.
 # Output yang diuji termasuk verifikasi skor akhir 100/100 dan respons jawaban benar sebanyak dua kali.
 
+# Fungsi utama untuk memulai kuis
 def start_quiz():
     """
-    Fungsi utama untuk menjalankan kuis.
-    Meminta input nama pengguna, memilih kategori kuis, dan menampilkan pertanyaan.
+    Memulai kuis dengan meminta nama pengguna dan memilih kategori.
+    Kemudian, menampilkan pertanyaan dan menghitung skor akhir.
     """
     print("=== Selamat datang di EduQuiz ===")
-    # Meminta input nama pengguna
     name = input("Masukkan nama Anda: ")
 
     # Menampilkan pilihan kategori kuis
@@ -37,6 +37,7 @@ def start_quiz():
     category_input = input("Pilihan (1-5): ")
 
     # Menentukan kategori berdasarkan input pengguna
+    # Menggunakan teknik konstruksi Automata State (finite state machine) untuk menentukan kategori
     category = ""  # Inisialisasi category dengan nilai default
     if category_input == "1":
         category = "Matematika"
@@ -49,10 +50,11 @@ def start_quiz():
     elif category_input == "5":
         category = "Kriptografi"
     else:
+        # Menggunakan teknik konstruksi Defensive Programming untuk menangani input tidak valid
         print("Pilihan tidak valid. Default ke 'Matematika'")
         category = "Matematika"
 
-    # Memuat pertanyaan berdasarkan kategori yang dipilih
+    # Menggunakan teknik konstruksi Defensive Programming untuk menangani kasus tidak ada pertanyaan
     chosen_set = load_questions_by_category(category)
     if not chosen_set:
         print("Tidak ada pertanyaan untuk kategori ini")
