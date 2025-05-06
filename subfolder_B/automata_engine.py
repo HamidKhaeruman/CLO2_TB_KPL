@@ -17,9 +17,15 @@ from subfolder_A.kuis_table import load_quiz_data, lookup_quiz
 # Output yang diuji termasuk verifikasi skor akhir 100/100 dan respons jawaban benar sebanyak dua kali.
 
 def start_quiz():
+    """
+    Fungsi utama untuk menjalankan kuis.
+    Meminta input nama pengguna, memilih kategori kuis, dan menampilkan pertanyaan.
+    """
     print("=== Selamat datang di EduQuiz ===")
+    # Meminta input nama pengguna
     name = input("Masukkan nama Anda: ")
 
+    # Menampilkan pilihan kategori kuis
     print("\nPilih kategori:")
     print("1. Matematika")
     print("2. Bahasa Indonesia")
@@ -27,9 +33,11 @@ def start_quiz():
     print("4. Manajemen Bisnis")
     print("5. Cryptography")
 
+    # Meminta input pilihan kategori
     category_input = input("Pilihan (1-5): ")
 
-    category = "" # Inisialisasi category dengan nilai default
+    # Menentukan kategori berdasarkan input pengguna
+    category = ""  # Inisialisasi category dengan nilai default
     if category_input == "1":
         category = "Matematika"
     elif category_input == "2":
@@ -44,12 +52,15 @@ def start_quiz():
         print("Pilihan tidak valid. Default ke 'Matematika'")
         category = "Matematika"
 
+    # Memuat pertanyaan berdasarkan kategori yang dipilih
     chosen_set = load_questions_by_category(category)
     if not chosen_set:
         print("Tidak ada pertanyaan untuk kategori ini")
         return
 
+    # Inisialisasi counter jawaban benar
     correct_count = 0
+    # Menampilkan pertanyaan dan memeriksa jawaban pengguna
     for index, quiz in enumerate(chosen_set):
         print(f"\nSoal {index}: {quiz['question']}")
         answer = input("Jawaban Anda: ")
@@ -59,6 +70,7 @@ def start_quiz():
         else:
             print(f"❌ Salah. Jawaban yang benar: {quiz['answer']}")
 
+    # Menghitung skor akhir
     score = calculate_score(correct_count, len(chosen_set))
     print(f"\n{name}, skor akhir Anda: {score}/100")
     print("=== Terima kasih telah bermain! ===")
