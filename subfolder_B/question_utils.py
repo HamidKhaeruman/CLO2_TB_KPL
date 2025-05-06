@@ -4,7 +4,6 @@ from subfolder_A.kuis_table import load_quiz_data, lookup_quiz
 
 def load_questions_by_category(category):
     quizzes = load_quiz_data()
-    print(quizzes)
     return [q for q in quizzes if q['category'] == category]
 
 def evaluate_answer(correct_answer, user_answer):
